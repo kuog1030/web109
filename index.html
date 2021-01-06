@@ -1,119 +1,189 @@
 <html>
 
 <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
+
+    <style>
+        #stage1, #stage2, #stage3, #stage4, #stage5, #stage6, #stage7, #stage8, #stage9 {
+            background-image: url("assets/BKG.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
     <title>baseball!</title>
 </head>
 
 
 <body>
     <section id="lifegame">
-            <div id="stage1" style="background-color:#c5e4ee; height:100vh;">
-                <div class="row">
-                    <div class="col-md-8 offset-2">
-                        <h3 class="text-center" style="margin-top: 20vh;">現在的你小五</h3>
-                        <p style="color: #707070;margin-top:10vh;">我需要你 需要你 需要你陪伴我好想要你 
-                            想要你 想要你陪著我卻只能等候看魚仔 在那 游來游去 游來遊去我對你 
-                            想來想去 想來想去這幾年我的打拼跟認真 都是因為你花在風中 搖來搖去 
-                            搖來搖去我對你 想來想去 想到半暝希望月光帶你回來我身邊我需要你 需要你 需</p>
-                        <div style="margin-top: 10vh;">
-                            <button id="chooseA" type="button" class="btn col-3 offset-2">加入棒球隊</button>
-                            <button id="chooseB" type="button" class="btn col-3 offset-2">不加入棒球隊</button>
-                        </div>
-                    </div>
+            <div id="stage1" class="container-fluid" style="height:100vh;">
+                <img src="assets/lai.png" class="left-ppl">
+                <div class="dialogue">
+                    <p>小時候我爸都會帶我看球，那時候就覺得陳鏞基和張泰山很帥。
+                        後來部落裡的朋友都在打棒球，和他們打著打著，我開始想像自己成為職棒選手的樣子。
+                        剛好今年暑假參加了棒球夏令營，教練問我要不要加入學校青少棒隊；爸爸也滿支持的樣子……要加入嗎？</p>
+                    <button id="choose2" type="button" class="btn col-md-3 offset-md-2 col-sm-12">加入棒球隊</button>
+                    <button id="choose3" type="button" class="btn col-md-3 offset-md-2 col-12">不加入棒球隊</button>
                 </div>
             </div>
 
-            <div id="stage2" style="background-color:#eaf7d3; height:100vh;display: none;">
-                <div class="row">
-                    <div class="col-md-8 offset-2">
-                        <h3 class="text-center" style="margin-top: 20vh;">現在的你國中了</h3>
-                        <p style="color: #707070;margin-top:10vh;">想像著生活 風平浪靜
-                            打開了窗戶 突然想起
-                            你在的世界 會不會很靠近水星
-                            
-                            看魚仔 在那 游來游去 游來遊去
-                            我對你 想來想去 想來想去
-                            這幾年我的打拼跟認真 都是因為你
-                            
-                            花在風中 搖來搖去 搖來搖去
-                            我對你 想來想去 想到半暝
-                            希望月光帶你回來我身邊</p>
-                        <div style="margin-top: 10vh;">
-                            <button id="chooseC" type="button" class="btn col-3 offset-2">報名學測</button>
-                            <button id="chooseD" type="button" class="btn col-3 offset-2">不報名學測</button>
-                        </div>
-                    </div>
+            <div id="stage2" class="container-fluid" style="height:100vh; display: none;">
+                <img src="assets/lai.png" class="left-ppl">
+                <div class="dialogue">
+                    <p>在國中棒球隊都打得不錯，現在就要畢業了，是時候該想想我的下一步了。家人都還滿支持我繼續打球，不然……高中繼續打棒球好了！念哪一所高中都無所謂，只要可以打棒球都好。
+                        高中棒球隊的生活好像沒有想像中好玩，每天練習、晨操，真的好無聊。不然…今天晨操要不要偷懶一下呀？</p>
+                    <button id="choose5" type="button" class="btn col-md-3 offset-md-2 col-sm-12">偷懶</button>
+                    <button id="choose4" type="button" class="btn col-md-3 offset-md-2 col-12">不偷懶</button>
                 </div>
             </div>
 
-
-            <div id="stage3" class="col-sm-12">
-
-            </div>
-    </section>
-
-
-<!--  -->
-
-
-    <section id="report" style="display: none;">
-        <div class="jumbotron">
-            <div class='container'>
-                <div class="col-sm-12">
-                    <h1>是否夢想成為職業棒球選手？</h1>
-                    <p class='lead'>讓我們從小時候開始看看棒球之路</p>
-                    <button id="jointeam">Try it</button>
-                    <!-- <a id='jointeam' class='btn' style= 'margin-right: 100px;'href='#'>加入球隊</a> -->
-                    <img src='assets/ball1.jpg' style='width:100px'>
+            <div id="stage3" class="container-fluid" style="height:100vh; display: none;">
+                <!-- 朋友勸他加入棒球隊 -->
+                <img src="assets/lai.png" class="left-ppl">
+                <div class="dialogue">
+                    <p>朋友：欸欸，整個部落只剩下你沒有加了啦，我都加了，一起去打球啦！</p>
                 </div>
             </div>
-        </div>
 
-        <div class='row'>
-            <div class='col-md-8 offset-md-2'>
-                <h3 class='text-center'>學測到了</h3>
-                <p>還不確定自己未來要繼續打球還是念書，報考學測要花錢，也要花時間準備。到底要不要報名參加呢？</p>
-                <p style='color: #707070'>如果要念大學、科大的體系，目前有兩個選項可以走:一是冬天的學測、二是夏天的指考。不選擇其一的話就沒有辦法念大學</p>
+            <div id="stage4" class="container-fluid" style="height:100vh; display: none;">
+                <!-- 不偷懶不練球 -->
+                <img src="assets/lai.png" class="left-ppl">
+                <div class="dialogue">
+                    <p>唉，雖然乖乖去練球了，但是訓練越來越無聊，而且教練都只管木棒組，鋁棒組也想要好好練習啊。一直以來都這樣，我接下來該怎麼辦？
+                    </p>
+                    <button id="choose7" type="button" class="btn col-md-3 offset-md-2 col-sm-12">放棄打棒球</button>
+                    <button id="choose6" type="button" class="btn col-md-3 offset-md-2 col-12">繼續撐下去</button>
+                </div>
             </div>
 
-            <div class='col-md-4 offset-md-2'>
-                <img src='assets/ball1.jpg' style='width:380px; border-radius: 20px;'>
-
+            <div id="stage5" class="container-fluid" style="height:100vh; display: none;">
+                <!-- 偷懶練球 -->
+                <img src="assets/senpai.png" class="md-ppl">
+                <div class="dialogue" style="font-size: 25px;">
+                    <p>學長：幹什麼東西，偷懶？想被打嗎！</p>
+                </div>
             </div>
-        </div>
+
+            <div id="stage6" class="container-fluid" style="height:100vh; display: none;">
+                <!-- 不放棄打棒球-->
+                <img src="assets/lai.png" class="left-ppl">
+                <img src="assets/senpai.png" class="right-ppl">
+                <div class="dialogue">
+                    <p>仔細想想，對阿，反正不打棒球我也不知道要幹嘛，讀書更無聊吧。而且學長跟我說再撐一下就好了，再撐一下，我大學就會有機會了。最近學校發下了學測報名表，學測好像是拿來考大學的，我該報名嗎？
+                    </p>
+                    <button id="choose9" type="button" class="btn col-md-3 offset-md-2 col-sm-12">報名學測</button>
+                    <button id="choose8" type="button" class="btn col-md-3 offset-md-2 col-12">不報名學測</button>
+                </div>
+            </div>
+
+            <div id="stage7" class="container-fluid" style="height:100vh; display: none;">
+                <!-- 放棄打棒球學長勸 -->
+                <img src="assets/lai.png" class="left-ppl">
+                <img src="assets/senpai.png" class="right-ppl">
+                <div class="dialogue">
+                    <p>學長一直跟我說撐下去就對了。現在至少還有學長會帶我，不如……就把高中棒球打完吧</p>
+                </div>
+            </div>
+
+            <div id="stage8" class="container-fluid" style="height:100vh; display: none;">
+                <!-- 不報名學測 -->
+                <img src="assets/lai.png" class="left-ppl">
+                <div class="dialogue">
+                    <p>因為練球的關係身體有了傷勢，高中打球的成績也沒特別好，哥哥說這樣根本就不能成為職棒選手。
+                        家裡的經濟不好，好像沒有辦法繼續支撐我打棒球，爸媽也覺得這條路不應該再走下去，
+                        應該要去讀有用一點的科系。</p>
+                </div>
+            </div>
+
+            <div id="stage9" class="container-fluid" style="height:100vh; display: none;">
+                <!-- 報名學測 -->
+                <img src="assets/lai.png" class="left-ppl">
+                <img src="assets/senpai.png" class="right-ppl">
+                <div class="dialogue">
+                    <p>教練：你把這個錢拿來繳退費比較實在啦！而且可以報體保阿，幹嘛報名，浪費錢。</p>
+                </div>
+            </div>
+
     </section>
 
     <script>
         $(document).ready(function () {
-            $("#chooseA").click(function () {
+            $("#choose2").click(function () {
                     $("#stage1").hide();
                     $("#stage2").show();
                 }
             );
-
-            $("#chooseC").click(function () {
-                    $("#stage2").hide();
-                    $("#report").show();
+            $("#choose3").click(function () {
+                    $("#stage1").hide();
+                    $("#stage3").show();
                 }
-            );           
-
-
+            );
+            $("#choose4").click(function () {
+                    $("#stage2").hide();
+                    $("#stage4").show();
+                }
+            );
+            $("#choose5").click(function () {
+                    $("#stage2").hide();
+                    $("#stage5").show();
+                }
+            );
+            $("#stage5").click(function(){
+                    $("#stage5").hide();
+                    $("#stage4").show();
+                }
+            );
+            $("#choose6").click(function () {
+                    $("#stage4").hide();
+                    $("#stage6").show();
+                }
+            );       
+            $("#choose7").click(function () {
+                    $("#stage4").hide();
+                    $("#stage7").show();
+                }
+            );    
+            $("#stage7").click(function(){
+                    $("#stage7").hide();
+                    $("#stage6").show();
+                }
+            );
+            $("#choose8").click(function () {
+                    $("#stage6").hide();
+                    $("#stage8").show();
+                }
+            );    
+            $("#choose9").click(function () {
+                    $("#stage6").hide();
+                    $("#stage9").show();
+                }
+            );    
+            $("#stage9").click(function(){
+                    $("#stage9").hide();
+                    $("#stage8").show();
+                }
+            );
         })
 
-        // 方法2
-        // document.getElementById("jointeam").addEventListener("click", displayGame);
-        // function displayGame() {
-        // $(lifegame).hide();
-        // }
+        // $('#stage1').click(function(){
+            // $(this).find('p').text('剛好今年暑假我參加了棒球訓練營，營隊裡面的教練說我可以去參加他們的棒球隊！這個機會很難得，而且舅舅跟爸爸都很支持我加入棒球隊，我該：');
+            // });
+
     </script>
 
 </body>
