@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+
+    <link rel='stylesheet' href="css/mywork.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        #stage1{
+            background-image: url("assets/BKG7.jpg");
+        }
+
+        #stage2{
+            background-image: url("assets/BKG6.jpg");
+        }
+
+        .bkgStyle {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        };
+
+
+        .buffer {
+            min-height: 20vh;
+        }
+    </style>
+    <title>Baseball</title>
+
+</head>
+
+<body data-spy="scroll" data-target="#nav" data-offset="0">
+
+    <section id="lifegame">
+        <div id="stage1" class="container-fluid bkgStyle" style="height:100vh;">
+            <img src="assets/lai.png" class="left-ppl">
+            <div class="dialogue">
+                <button id="skip"> Skip</button>
+                <p id="text1_1">小時候我爸都會帶我看球，我覺得陳鏞基和張泰山很帥！後來部落裡的朋友都在打棒球，和他們打著打著，我開始想像自己成為職棒選手的樣子。</p>
+                <div id="text1_2" style="display: none;">
+                    <p>剛好今年暑假有機會加入棒球隊，爸爸也滿支持的樣子……要加入嗎？</p>
+                    <button id="choose2" type="button" class="btn col-md-3 offset-md-2 col-sm-12">> 加入棒球隊</button>
+                    <button id="choose3" type="button" class="btn col-md-3 offset-md-2 col-12">> 不加入棒球隊</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="stage2" class="container-fluid bkgStyle" style="height:100vh; display: none;">
+            <img src="assets/lai2.png" class="left-ppl">
+            <div class="dialogue">
+                <p id="text2_1">在國中棒球隊都打得不錯，現在就要畢業了，是時候該想想我的下一步了。家人都還滿支持我繼續打球，不然……高中繼續打棒球好了！</p>
+                <div id="text2_2" style="display: none;">
+                    <p>高中棒球隊的生活好像沒有想像中好玩，每天練習、晨操，真的好無聊。不然…今天晨操要不要偷懶一下呀？</p>
+                    <button id="choose5" type="button" class="btn col-md-3 offset-md-2 col-sm-12">偷懶</button>
+                    <button id="choose4" type="button" class="btn col-md-3 offset-md-2 col-12">不偷懶</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="stage3" class="container-fluid" style="height:100vh; display: none;">
+            <!-- 朋友勸他加入棒球隊 -->
+            <img src="assets/friend.png" class="left-ppl">
+            <div class="dialogue">
+                <p>朋友：欸欸，整個部落只剩下你沒有加了啦，我都加了，一起去打球啦！</p>
+            </div>
+        </div>
+
+        <div id="stage4" class="container-fluid" style="height:100vh; display: none;">
+            <!-- 不偷懶不練球 -->
+            <img src="assets/lai2.png" class="left-ppl">
+            <div class="dialogue">
+                <p>唉，雖然乖乖去練球了，但是訓練越來越無聊，而且教練都只管木棒組，鋁棒組也想要好好練習啊。一直以來都這樣，我接下來該怎麼辦？
+                </p>
+                <button id="choose7" type="button" class="btn col-md-3 offset-md-2 col-sm-12">放棄打棒球</button>
+                <button id="choose6" type="button" class="btn col-md-3 offset-md-2 col-12">繼續撐下去</button>
+            </div>
+        </div>
+
+        <div id="stage5" class="container-fluid" style="height:100vh; display: none;">
+            <!-- 偷懶練球 -->
+            <img src="assets/senpai.png" class="md-ppl">
+            <div class="dialogue" style="font-size: 25px;">
+                <p>學長：幹什麼東西，偷懶？想被打嗎！</p>
+            </div>
+        </div>
+
+        <div id="stage6" class="container-fluid" style="height:100vh; display: none;">
+            <!-- 不放棄打棒球-->
+            <img src="assets/lai2.png" class="left-ppl">
+            <img src="assets/senpai.png" class="right-ppl">
+            <div class="dialogue">
+                <p>仔細想想，對阿，反正不打棒球我也不知道要幹嘛，讀書更無聊吧。而且學長跟我說再撐一下就好了，再撐一下，我大學就會有機會了。最近學校發下了學測報名表，學測好像是拿來考大學的，我該報名嗎？
+                </p>
+                <button id="choose9" type="button" class="btn col-md-3 offset-md-2 col-sm-12">報名學測</button>
+                <button id="choose8" type="button" class="btn col-md-3 offset-md-2 col-12">不報名學測</button>
+            </div>
+        </div>
+
+        <div id="stage7" class="container-fluid" style="height:100vh; display: none;">
+            <!-- 放棄打棒球學長勸 -->
+            <img src="assets/lai2.png" class="left-ppl">
+            <img src="assets/senpai2.png" class="right-ppl">
+            <div class="dialogue">
+                <p>學長一直跟我說撐下去就對了。現在至少還有學長會帶我，不如……就把高中棒球打完吧</p>
+            </div>
+        </div>
+
+        <div id="stage8" class="container-fluid" style="height:100vh; display: none;">
+            <!-- 不報名學測 -->
+            <img src="assets/lai2.png" class="left-ppl">
+            <div class="dialogue">
+                <p>因為練球的關係身體有了傷勢，高中打球的成績也沒特別好，哥哥說這樣根本就不能成為職棒選手。
+                    家裡的經濟不好，好像沒有辦法繼續支撐我打棒球，爸媽也覺得這條路不應該再走下去，
+                    應該要去讀有用一點的科系。</p>
+            </div>
+        </div>
+
+        <div id="stage9" class="container-fluid" style="height:100vh; display: none;">
+            <!-- 報名學測 -->
+            <img src="assets/coach.png" class="md-ppl" style="z-index: 0;">
+            <div class="dialogue" style="font-size: 25px;">
+                <p>教練：你把這個錢拿來繳退費比較實在啦！而且可以報體保阿，幹嘛報名，浪費錢。</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="report" style="display: none;">
+
+    <section id='cover'>
+        <div class="container-fluid" style="height: 150vh;background-color: beige;">
+
+        </div>
+
+    </section>
+
+    <div id="nav" class="list-group" style="position:fixed">
+        <a class="list-group-item list-group-item-action" href="#intro">全民運動</a>
+        <a class="list-group-item list-group-item-action" href="#reason">盛行原因</a>
+        <a class="list-group-item list-group-item-action" href="#high_school">失望與幻滅</a>
+        <a class="list-group-item list-group-item-action" href="#future">未來何去何從</a>
+    </div>
+
+
+    <section id='intro' data-spy="scroll" data-target="#nav">
+        <div class="container-fluid section" style="height: 300vh;background-color: darkkhaki;">
+            <div class='buffer'></div>
+            <div class="row" style="height: 30vh;">
+                <div class="col-sm-2"></div>
+                <div class="col-md-6">
+                    <h3>在台灣，原住民的人口約占了全部人口的2.4%<br>
+                        但在目前職棒的一軍球員中，原住民的比例卻已經高達<strong>40.2%</strong></h3>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+
+
+            <div class="row" style="height: 80vh;">
+
+                <div class="col-sm-2"></div>
+                <div class="col-sm-6">
+                    <p>無論是在職棒、電影情節或是現實生活中，「原住民很會打棒球」 已經成為人們心中無法動搖的印象<br>
+                        打棒球更成為原住民部落中一種歷久不衰的流行。</p>
+                </div>
+                <div class="col-sm-4"></div>
+
+                <div class="col-sm-2"></div>
+                <div class="col-md-6">
+                    <p>棒球對原住民來說已經不僅僅是一種娛樂，而是深深牽動著他們生活的信仰。而打進職棒，無疑是各個擁有棒球魂的人們最嚮往的一種人生。基於對棒球的熱愛以及想要打進職棒的夢想，許多原住民從小就加入棒球隊接受訓練。這群孩子投入大量的時間與精力在棒球上，將所有的生活重心從課業轉移到訓練生活中，朝著自己的目標前進。
+                    <p><br>
+
+                    <p> 但孩子們如此高比例、高密度的投入棒球，究竟是不是一件好事呢？又是甚麼原因讓棒球成為原住民的一種「全民運動」？有這麼多的原住民孩子走上打棒球這條路，對他們又造成怎麼樣的影響？那些沒有成為職棒球員的多數人，後來又到了哪裡去？這些問題，無論是對我們或是原住民孩子來說，似乎都成了一道無解的難題。
+
+                    </p>
+                </div>
+                <div class="col-sm-4"></div>
+
+            </div>
+            
+            <div class='buffer' style="height: 50vh;"></div>
+
+            <div class="row">
+                <div id='highlight_1' class='col-12 text-white' style='height: 120vh;z-index: 10;'>
+                    <h1 class='fadeout' style="padding-top:20vh;padding-left: 10vh; color: black">這群孩子在棒球場上奔跑著<br>
+                        他們跑向的是勝利的終點，還是人生的原點呢？</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id='reason' data-spy="scroll" data-target="#nav">
+        <div class='container-fluid section' style="height:400vh;background-color: blanchedalmond;">
+
+            <div class='sticky-top' style="height:90vh;width: 40vw;background-color: blanchedalmond;padding-left: 0vw; z-index: 3;">
+                <div class='buffer'></div>
+                <p style='padding: 20vh 0px 20px;text-align: center;font-size: 20px'>為什麼原住民加入棒球隊的風氣那麼興盛？</p>
+                <p style='padding: 20px 0px 20px;text-align: center;font-size: 20px'>可以分成以下三個原因進一步說明：</p>
+            </div>
+
+
+
+            <div class=' container reason1' style="height: 70vh;margin-right: 5vw;width:45vw;z-index: 3;background-color: blanchedalmond;text-align:center">
+                <h3>先天優勢</h3><br>
+                <p style="text-align:left">不可否認的，先天的優勢讓原住民成為運動場上的佼佼者，
+                    他們在運動方面有著驚人的協調性與爆發力，也成為他們大量投入的契機與原因。
+                </p>
+            </div>
+
+            <div class=' container reason2' style="height: 100vh;margin-right:5vw;width:45vw;z-index: 3;background-color: blanchedalmond;text-align:center">
+
+                <h3 style="height: 50px">社會風氣</h3>
+                <p style="text-align:left">家人的支持加上環境的催化，讓加入棒球隊對原住民小孩來說成為一種理所當然。許多原住民孩子一開始接觸到棒球都是受到家人的影響。受訪者小賴就有提到自己一開始就是因為爸爸很愛看棒球，於是看著看著自己也對棒球產生了興趣。<br><br>
+                    但棒球不只是一個個人的興趣，它也成為了一種家人間的傳承。在原住民社會中，父親常常將自己對棒球的熱愛或是無法成為棒球員的遺憾轉為對小孩的期許。承接來自家人的期待，棒球隊原住民來說有了更深遠的意義。無論未來是否朝此方向發展，這些孩子都已經在過程中再度被塑造為傳承棒球的有力媒介。他們基於對棒球的熱情而努力，成功者成為棒球文化中的正向誘因，失敗者則將這些熱愛向下一代傳遞，讓棒球的價值生生不息的循環著。<br><br>
+                    除此之外，社區也是棒球風氣的促成者。受訪者也提到，幾乎整個部落的小孩都會參加棒球隊，棒球成為大家的共同興趣以及與彼此聊天的話題。建立關係也促進了棒球在部落中的盛行。
+                </p>
+
+
+            </div>
+
+            <div class=' container reason3' style="height: 140vh;margin-right:5vw;width:45vw;z-index: 3;background-color: blanchedalmond;text-align:center">
+
+
+                <h3>高薪誘因</h3>
+
+                <p style="text-align:left">驅使他們願意繼續投入棒球運動的動機，除了是對棒球的熱愛，也是一種對更好生活的想望。職棒的亮麗色彩讓這群孩子對於自己的未來、對好的生活有了更多的期待。</p>
+
+                <div style=""><canvas id="myChart" width="100px" height="100px"></canvas></div>
+                <div>
+
+
+                    <p> 多數的他們從小身處於經濟弱勢的環境，考量家中經濟是他們從小的課題。而加入棒球隊對他們來說，或許是成為「人生勝利組」的一種捷徑。</p><br>
+                    <p>結合優勢、興趣與高薪的棒球生涯，讓這些孩子趨之若鶩的投入其中，希望能夠藉此脫貧致富，也創造美好的人生。
+                    </p>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
+    </section>
+
+
+
+
+
+    <section id='high_school' data-spy="scroll" data-target="#nav">
+        <div class='container-fluid' style="height: 390vh; background-color: darksalmon">
+
+            <div class='row' style='background-color: black;min-height: 50vh;z-index: 10;'>
+                <div class="col-sm-3"></div>
+                <div id='highlight' class='container-fluid col-sm-6 text-white'>
+                    <h1 class='fadeout' style="padding-top:20vh;">但是打棒球日子並非每一天都是快樂而充實的。</h1>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+
+            <div class='buffer'></div>
+            <div class='row' style="height: 150vh">
+                <div class="col-sm-1"></div>
+                <div class="col-md-6">
+                    <p class="slideanimate">「教練覺得木棒組比較重要，大部分的精力都在木棒組上。當時感覺很差。木棒組去練球的時候時教練會過去，但換鋁棒組時就直接被放生。」</p>
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-5"></div>
+                <div class="col-md-6">
+                    <p class="slideanimate">「高中棒球隊人比較多，學長學弟制也比較重，學長們會因為可能打掃沒有做好、或是心情不好時就打人。」</p>
+                </div>
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-1"></div>
+                <div class="col-md-6">
+                    <p class="slideanimate">「我不太喜歡訓練的內容，有時候會覺得很無聊、想要出去，或是下雨天還是要訓練就很無趣。高中的棒球訓練也都幾乎一樣，沒什麼變化。幾乎都是投球、練守備、牛棚，不太有友誼賽之類的。」</p>
+                </div>
+                <div class="col-md-5"></div>
+
+            </div>
+            
+            <div class='buffer'></div>
+            <div class="row" style="height: 80vh">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <p class="fadeout">如同一場體育界的會考，這些選擇了棒球的孩子們在升上高中後也面對了人生中的第一次分流：重點訓練對象的木棒組以及難度較低的鋁棒組。<br>
+                        <br>
+                        (這裡我覺得可以再加一些對木棒鋁棒分組產生的現象描述)<br><br>
+                        制式化的訓練、嚴格的學長學弟制、教練的不公平，這些因素都讓不少這些孩子有了想要退隊的念頭，但神奇的是，這些因素也成為了他們留下的動力，當下的失望與不如預期漸漸轉換對未來生活的期待。
+                    </p>
+                </div>
+                <div class="col-sm-3"></div>
+
+            </div>
+
+            <div class='row' style='background-color: black;height:70vh;z-index: 10;'>
+                <div class="col-md-2"></div>
+                <div id='highlight' class='container-fluid col-md-8 text-white'>
+                    <h1 class='fadeout' style="padding-top:20vh;">「本來很想放棄，覺得訓練越來越無聊也很不紮實，但學長說再撐一下就好了，到大學之後，就可以有更多訓練的機會了。」小賴這麼說。</h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id='future' data-spy="scroll" data-target="#nav">
+        <div class='container-fluid' style="height: 250vh;background-color:lavender">
+            <div class='buffer'></div>
+            <div class="row" style="height: 100vh;">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h4 class='text-left'>隨著時間過去，他們的棒球生涯也到了九局下半，這時他們也必須面對人生的現實。</h4><br>
+                    <p>「想成為職棒球員，比考上台大醫科還要難。」<br><br>
+                        當少數棒球員憑著卓越的球技與機運繼續朝著目標走去，更多的他們面對的是放棄與被迫的選擇，只是此時這道人生的選擇題，能選擇的並不是他們。<br><br>
+                        大專院校的體保生名額有限，僅有少數的人可以繼續朝此發展，而大部分的人因為家中經濟因素的考量選擇直接就業。<br><br>
+                        投入體育班的訓練讓這些原住民的孩子在課業上落後了一大截，若是要升大學，大多都只能透過重考來彌補。但有更多的人因為家庭的經濟因素，在體育班後決定進入職場，從事志願役、體力工作、服務業等行業。體育班的訓練讓他們可以很快的適應這些工作，同時也可舒緩家中的經濟情況。</p>
+
+                    <div class='buffer'></div>
+                    <h3 class="fadeout">「我還是很喜歡棒球，可能之後有機會會去考大學球隊，不然就是去社區棒球隊打棒球吧！」</h3>
+                </div>
+                <div class="col-md-3"></div>
+
+            </div>
+
+            <div class='buffer'></div>
+            <div class='buffer'></div>
+            <div class='buffer'></div>
+            <div class="row" style="height: 50vh;">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <p>原住民的棒球文化體現了他們在教育、經濟上然仍存在著的不平等。整個社會推著原住民孩子走向棒球這條路，卻也是整個社會阻止他們繼續在棒球這條路上面前進。<br><br>
+
+                        當我們看到的是他們在場上的活躍，或許更該思考的是走下棒球場的他們，去了哪裡？<br><br>
+
+                        或許原住民對棒球的過度投入是個社會問題，但原住民對棒球的喜愛也是不爭的事實，該用甚麼樣的態度來面對這樣子的棒球文化，值得我們思考。</p>
+                    <div class="col-md-3"></div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+    <!--    chart_animate-->
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var chartdata = {
+            type: 'bar',
+            data: {
+                labels: ["未滿1萬元", "1萬元~未滿2萬元", "2萬元~未滿3萬元", "3萬元~未滿4萬元", "4萬元~未滿5萬元", "5萬元~未滿6萬元", "6萬元~未滿7萬元", '7萬元及以上'],
+                datasets: [{
+                    label: '原住民就業者每月主要工作收入分布',
+                    data: [2.44, 9.96, 39.14, 28.71, 11.51, 4.86, 2.04, 1.34],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                responsive: true // default true
+            }
+        };
+
+        var inView = false;
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var winTop = $(window).scrollTop();
+                var winh = $(window).height();
+                var objpos = $("#myChart").offset().top;
+                if (objpos < winTop + winh * 0.6 && !inView) {
+                    new Chart(ctx, chartdata);
+                    inView = true;
+                    console.log("successful!!");
+                }
+
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $(".slideanimate").each(function() {
+                    var pos = $(this).offset().top;
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + window.innerHeight * 0.8) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <!--     fade-in animation-->
+    <script>
+        $(window).scroll(function() {
+            $(".fadeout").each(function() {
+                var pos = $(this).offset().top;
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + window.innerHeight * 0.8) {
+                    $(this).addClass("fadein");
+                } else {
+                    $(this).removeClass("fadein");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        const stage = "#stage"
+        function stageChoose(hideNum, showNum){
+            $(stage+hideNum).hide();
+            $(stage+showNum).show();
+        };
+
+        function textShow(oldtext, newtext){
+            setTimeout(function(){
+                $(oldtext).hide();
+                $(newtext).show();}, 2000);
+            };
+
+        /* 陸續出現，但按鈕就無法
+        var stories = [' 喔喔喔喔','哈哈哈哈哈哈'];
+        function textShow2(ttl){
+            for(let i=0; i<ttl; i++){
+                setTimeout(function(){
+                    document.getElementById("text1_1").innerHTML = stories[i];
+                }, i*1000)
+            }
+        };
+
+        textShow2(2);*/
+        textShow("#text1_1", "#text1_2");
+
+        $("#choose2").click(function () {
+                stageChoose("1", "2");
+                textShow("#text2_1", "#text2_2");
+            }
+        );
+        $("#choose3").click(function () {
+                stageChoose("1", "3");
+            }
+        );
+        $("#stage3").click(function(){
+            stageChoose("3","4");
+        });
+
+        $("#choose4").click(function () {
+                stageChoose("2", "4");
+            }
+        );
+        $("#choose5").click(function () {
+                stageChoose("2", "5");
+            }
+        );
+        $("#stage5").click(function(){
+            stageChoose("5", "4");
+            }
+        );
+        $("#choose6").click(function () {
+            stageChoose("4", "6");
+            }
+        );       
+        $("#choose7").click(function () {
+            stageChoose("4", "7");
+            }
+        );    
+        $("#stage7").click(function(){
+            stageChoose("7", "6");
+            }
+        );
+        $("#choose8").click(function () {
+            stageChoose("6", "8");
+            }
+        );    
+        $("#choose9").click(function () {
+            stageChoose("6", "9");
+            }
+        );    
+        $("#stage9").click(function(){
+            stageChoose("9", "8");
+            }
+        );
+        $("#stage8").click(function(){
+            $("#stage8").hide();
+            $("#report").show();
+        })
+
+        $("#skip").click(function(){
+            $("#lifegame").hide();
+            $("#report").show();
+        })
+    </script>
+
+
+</body>
+</html>
