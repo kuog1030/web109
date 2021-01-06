@@ -76,12 +76,45 @@ canvas {
     }
 }
 
+body {
+    position: relative;
+}
 
+#nav {
+    top: 0px;
+    left: 0px;
+    width: 50px;
+}
 
+#nav a {
+    height: 25vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow-wrap: break-word;
+    border: none;
+}
 
+#nav a.active {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: dodgerblue;
+}
 
+p{
+    font-size: 20px;
+}
 
+.fadeout {
+    opacity: 0;
+    transition: opacity 1s linear;
+}
 
+.fadein {
+    opacity: 1;
+}
 
+#highlight_1{
+    background-image:url('/assets/highlught_1.jpg');
+    background-size: cover;
+    
+}
 
 
