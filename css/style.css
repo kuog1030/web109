@@ -12,15 +12,39 @@ body{
     font-family: "slkscr", Noto Sans TC;
 } */
 
+.pplImages{
+    position: relative;
+    top: 10vh;
+    height: 50vh;
+    max-width: 80vw;
+}
+
+.pplImages #left-ppl{
+    position: absolute;
+    height: 55vh;
+    left: 0px;
+    bottom: 0px;
+}
+
+.pplImages #md-ppl {
+    position: absolute;
+    height: 52vh;
+    bottom: -1.5vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 1;
+}
+
 .dialogue{
     position: relative;
-    top: 60vh;
+    top: 10vh;
     background:black;
     border: white 5px double;
     height:35vh;
     color: white;
     font-size: 25px;
     font-weight: 700;
+    max-width: 80vw;
 }
 
 #buttonClick .btn {
@@ -40,36 +64,18 @@ body{
     color:white;
 }
 
-.left-ppl{
-    position: fixed;
-    top: 5vh;
-    height: 60vh;
-    left: 15vw;
-}
-
 @media only screen and (max-width: 480px) {
-    .left-ppl {
-        /* position: absolute; */
-        top: 15vh;
-        height: 40vh;
-        left: 15vw;
+    .pplImages{
+        top: 7vh;
     }
-
     .dialogue{
-        height: 48vh;
-        top: 50vh;
+        top: 7vh;
+        height: 40vh;
+        max-width: 95vw;
+        font-size: 20px;
     }
   }
 
-.md-ppl{
-    position: fixed;
-    top: 32%;
-    left: 50%;
-    height: 60vh;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
 
 #lifegame h1 {
     font-weight: 800;

@@ -52,15 +52,18 @@
             <button id="skip">- Skip</button>
         </div>
         <div id="game" class="container-fluid bkgStyle" style="display: none;">
-            <img id="left-ppl" src="" class="left-ppl">
-            <img id="md-ppl" src="" class="md-ppl">
+            <div class="container pplImages">
+                <img id="left-ppl" src="">
+                <img id="md-ppl" src="">
+            </div>
             <div class="container dialogue">
                 <div id="textStory" class="row" style="height: 22vh; padding: 1.2em;"></div>
-                <div id="buttonClick" class="row" style="height: 8vh; display: none;margin-top: -3vh;">
+                <div id="buttonClick" class="row" style="display: none">
                     <button id="chooseA" class="btn col-md-3 offset-md-2 col-sm-12"></button>
                     <button id="chooseB" class="btn col-md-3 offset-md-2 col-sm-12"></button>
                 </div>
-                <div id="nextClick" class="col text-center" style="height: 5vh">- click -</div>
+                <div id="nextClick" class="col text-center" style="position: absolute; bottom: 2vh;">- click -</div>
+
             </div>
         </div>
     </section>
@@ -416,9 +419,10 @@
         }
         $("#cover").click(function(){
             $("#cover").hide();
-            $("#game").show();
+            $("#game").fadeIn(1500);
             console.log(subStage, mainStage);
-            nextStep();
+            setTimeout(nextStep, 1500);
+            // nextStep();
         });
 
         $("#game").click(function () {
