@@ -13,13 +13,18 @@
     <link rel='stylesheet' href="css/mywork.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- 如果要思源黑體再把這邊加進去 -->
     <style>
-        #stage1{
-            background-image: url("assets/BKG7.jpg");
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+    </style>
+    <!-- 思源黑體結束 -->
 
-        #stage2{
-            background-image: url("assets/BKG6.jpg");
+    <style>
+        #cover{
+            background-image: url("assets/cover.png");
+        }
+        #game {
+            background-image: url("assets/bkg1.jpg");
         }
 
         .bkgStyle {
@@ -27,8 +32,8 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-        };
-
+            height: 100vh;
+        }
 
         .buffer {
             min-height: 20vh;
@@ -41,94 +46,21 @@
 <body data-spy="scroll" data-target="#nav" data-offset="0">
 
     <section id="lifegame">
-        <div id="stage1" class="container-fluid bkgStyle" style="height:100vh;">
-            <img src="assets/lai.png" class="left-ppl">
-            <div class="dialogue">
-                <button id="skip"> Skip</button>
-                <p id="text1_1">小時候我爸都會帶我看球，我覺得陳鏞基和張泰山很帥！後來部落裡的朋友都在打棒球，和他們打著打著，我開始想像自己成為職棒選手的樣子。</p>
-                <div id="text1_2" style="display: none;">
-                    <p>剛好今年暑假有機會加入棒球隊，爸爸也滿支持的樣子……要加入嗎？</p>
-                    <button id="choose2" type="button" class="btn col-md-3 offset-md-2 col-sm-12">> 加入棒球隊</button>
-                    <button id="choose3" type="button" class="btn col-md-3 offset-md-2 col-12">> 不加入棒球隊</button>
+        <div id="cover" class="container-fluid bkgStyle">
+            <p class="text-center" style="font-weight: bold;font-size: 30px; padding-top: 30vh;">
+                --------------------<br>click to start game<br>--------------------</p>
+            <button id="skip">- Skip</button>
+        </div>
+        <div id="game" class="container-fluid bkgStyle" style="display: none;">
+            <img id="left-ppl" src="" class="left-ppl">
+            <img id="md-ppl" src="" class="md-ppl">
+            <div class="container dialogue">
+                <div id="textStory" class="row" style="height: 22vh; padding: 1.2em;"></div>
+                <div id="buttonClick" class="row" style="height: 8vh; display: none;margin-top: -3vh;">
+                    <button id="chooseA" class="btn col-md-3 offset-md-2 col-sm-12"></button>
+                    <button id="chooseB" class="btn col-md-3 offset-md-2 col-sm-12"></button>
                 </div>
-            </div>
-        </div>
-
-        <div id="stage2" class="container-fluid bkgStyle" style="height:100vh; display: none;">
-            <img src="assets/lai2.png" class="left-ppl">
-            <div class="dialogue">
-                <p id="text2_1">在國中棒球隊都打得不錯，現在就要畢業了，是時候該想想我的下一步了。家人都還滿支持我繼續打球，不然……高中繼續打棒球好了！</p>
-                <div id="text2_2" style="display: none;">
-                    <p>高中棒球隊的生活好像沒有想像中好玩，每天練習、晨操，真的好無聊。不然…今天晨操要不要偷懶一下呀？</p>
-                    <button id="choose5" type="button" class="btn col-md-3 offset-md-2 col-sm-12">偷懶</button>
-                    <button id="choose4" type="button" class="btn col-md-3 offset-md-2 col-12">不偷懶</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="stage3" class="container-fluid" style="height:100vh; display: none;">
-            <!-- 朋友勸他加入棒球隊 -->
-            <img src="assets/friend.png" class="left-ppl">
-            <div class="dialogue">
-                <p>朋友：欸欸，整個部落只剩下你沒有加了啦，我都加了，一起去打球啦！</p>
-            </div>
-        </div>
-
-        <div id="stage4" class="container-fluid" style="height:100vh; display: none;">
-            <!-- 不偷懶不練球 -->
-            <img src="assets/lai2.png" class="left-ppl">
-            <div class="dialogue">
-                <p>唉，雖然乖乖去練球了，但是訓練越來越無聊，而且教練都只管木棒組，鋁棒組也想要好好練習啊。一直以來都這樣，我接下來該怎麼辦？
-                </p>
-                <button id="choose7" type="button" class="btn col-md-3 offset-md-2 col-sm-12">放棄打棒球</button>
-                <button id="choose6" type="button" class="btn col-md-3 offset-md-2 col-12">繼續撐下去</button>
-            </div>
-        </div>
-
-        <div id="stage5" class="container-fluid" style="height:100vh; display: none;">
-            <!-- 偷懶練球 -->
-            <img src="assets/senpai.png" class="md-ppl">
-            <div class="dialogue" style="font-size: 25px;">
-                <p>學長：幹什麼東西，偷懶？想被打嗎！</p>
-            </div>
-        </div>
-
-        <div id="stage6" class="container-fluid" style="height:100vh; display: none;">
-            <!-- 不放棄打棒球-->
-            <img src="assets/lai2.png" class="left-ppl">
-            <img src="assets/senpai.png" class="right-ppl">
-            <div class="dialogue">
-                <p>仔細想想，對阿，反正不打棒球我也不知道要幹嘛，讀書更無聊吧。而且學長跟我說再撐一下就好了，再撐一下，我大學就會有機會了。最近學校發下了學測報名表，學測好像是拿來考大學的，我該報名嗎？
-                </p>
-                <button id="choose9" type="button" class="btn col-md-3 offset-md-2 col-sm-12">報名學測</button>
-                <button id="choose8" type="button" class="btn col-md-3 offset-md-2 col-12">不報名學測</button>
-            </div>
-        </div>
-
-        <div id="stage7" class="container-fluid" style="height:100vh; display: none;">
-            <!-- 放棄打棒球學長勸 -->
-            <img src="assets/lai2.png" class="left-ppl">
-            <img src="assets/senpai2.png" class="right-ppl">
-            <div class="dialogue">
-                <p>學長一直跟我說撐下去就對了。現在至少還有學長會帶我，不如……就把高中棒球打完吧</p>
-            </div>
-        </div>
-
-        <div id="stage8" class="container-fluid" style="height:100vh; display: none;">
-            <!-- 不報名學測 -->
-            <img src="assets/lai2.png" class="left-ppl">
-            <div class="dialogue">
-                <p>因為練球的關係身體有了傷勢，高中打球的成績也沒特別好，哥哥說這樣根本就不能成為職棒選手。
-                    家裡的經濟不好，好像沒有辦法繼續支撐我打棒球，爸媽也覺得這條路不應該再走下去，
-                    應該要去讀有用一點的科系。</p>
-            </div>
-        </div>
-
-        <div id="stage9" class="container-fluid" style="height:100vh; display: none;">
-            <!-- 報名學測 -->
-            <img src="assets/coach.png" class="md-ppl" style="z-index: 0;">
-            <div class="dialogue" style="font-size: 25px;">
-                <p>教練：你把這個錢拿來繳退費比較實在啦！而且可以報體保阿，幹嘛報名，浪費錢。</p>
+                <div id="nextClick" class="col text-center" style="height: 5vh">- click -</div>
             </div>
         </div>
     </section>
@@ -451,90 +383,63 @@
     </script>
 
     <script>
-        const stage = "#stage"
-        function stageChoose(hideNum, showNum){
-            $(stage+hideNum).hide();
-            $(stage+showNum).show();
-        };
-
-        function textShow(oldtext, newtext){
-            setTimeout(function(){
-                $(oldtext).hide();
-                $(newtext).show();}, 2000);
-            };
-
-        /* 陸續出現，但按鈕就無法
-        var stories = [' 喔喔喔喔','哈哈哈哈哈哈'];
-        function textShow2(ttl){
-            for(let i=0; i<ttl; i++){
-                setTimeout(function(){
-                    document.getElementById("text1_1").innerHTML = stories[i];
-                }, i*1000)
-            }
-        };
-
-        textShow2(2);*/
-        textShow("#text1_1", "#text1_2");
-
-        $("#choose2").click(function () {
-                stageChoose("1", "2");
-                textShow("#text2_1", "#text2_2");
-            }
-        );
-        $("#choose3").click(function () {
-                stageChoose("1", "3");
-            }
-        );
-        $("#stage3").click(function(){
-            stageChoose("3","4");
-        });
-
-        $("#choose4").click(function () {
-                stageChoose("2", "4");
-            }
-        );
-        $("#choose5").click(function () {
-                stageChoose("2", "5");
-            }
-        );
-        $("#stage5").click(function(){
-            stageChoose("5", "4");
-            }
-        );
-        $("#choose6").click(function () {
-            stageChoose("4", "6");
-            }
-        );       
-        $("#choose7").click(function () {
-            stageChoose("4", "7");
-            }
-        );    
-        $("#stage7").click(function(){
-            stageChoose("7", "6");
-            }
-        );
-        $("#choose8").click(function () {
-            stageChoose("6", "8");
-            }
-        );    
-        $("#choose9").click(function () {
-            stageChoose("6", "9");
-            }
-        );    
-        $("#stage9").click(function(){
-            stageChoose("9", "8");
-            }
-        );
-        $("#stage8").click(function(){
-            $("#stage8").hide();
-            $("#report").show();
-        })
+        var mainStage = 1;
+        var subStage = 0;
+        var buttonA = document.getElementById("chooseA");
+        var buttonB = document.getElementById("chooseB");
+        var imageL = document.getElementById("left-ppl");
+        var imageM = document.getElementById("md-ppl");
 
         $("#skip").click(function(){
             $("#lifegame").hide();
-            $("#report").show();
+            $("#report").show();});
+
+        function nextStep() {
+            var main = mainStage.toString();
+            var maxStory = textStories[main].length;
+            if (subStage < maxStory) {
+                storyChange();
+                imageChange(main, subStage);
+                subStage += 1;
+            } else if (subStage == maxStory) {
+                subStage = 99;
+                if (main == '5') {
+                    $("#game").hide();
+                    $("#report").show();
+                } else {
+                    $("#buttonClick").show();
+                    $("#nextClick").hide();
+                    buttonA.innerHTML = textButton[main][0];
+                    buttonB.innerHTML = textButton[main][1];
+                };
+            };
+        }
+        $("#cover").click(function(){
+            $("#cover").hide();
+            $("#game").show();
+            console.log(subStage, mainStage);
+            nextStep();
+        });
+
+        $("#game").click(function () {
+            console.log(subStage, mainStage);
+            nextStep();
+        });
+
+        $("#chooseA").click(function () {
+            $("#buttonClick").hide();
+            $("#nextClick").show();
+            subStage = 1;
+            mainStage += 1;
+        });
+        $("#chooseB").click(function () {
+            $("#buttonClick").hide();
+            $("#nextClick").show();
+            subStage = 0;
+            mainStage += 1;
         })
     </script>
+    <script src="js/game.js"></script>
 
 
 </body>

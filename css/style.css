@@ -1,31 +1,48 @@
+/* 思源黑體的版本 */
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+/* 下載英文8bit字體 */
+@font-face{
+    font-family: slkscr;
+    src: url("slkscr.ttf");
+}
+/*
+body{
+    font-family: "slkscr", Noto Sans TC;
+} */
+
 .dialogue{
-    position: fixed;
-    background:rgb(51, 51, 51);
-    border: black 10px solid;
-    height:33vh;
-    width:75vw;
-    left: 11vw;
-    bottom: 5vh;
+    position: relative;
+    top: 60vh;
+    background:black;
+    border: white 5px double;
+    height:35vh;
     color: white;
-    padding: 1em;
     font-size: 25px;
     font-weight: 700;
 }
 
-
-.dialogue_box{
-    position: relative;
-    background: rgb(51, 51, 51);
-    border: 4px solid black;
-    padding: 30px;
+#buttonClick .btn {
+    border:4px solid black;
+    background: white;
+    color: black;
+    /* margin-top: 3px; */
+    font-size: 23px;
     font-weight: 700;
-    color: white;
-    font-family: arial;
+}
+#nextClick{
+    color:gray;
+    font-family: slkscr;
+}
+
+#nextClick:hover{
+    color:white;
 }
 
 .left-ppl{
-    position: absolute;
-    top: 8vh;
+    position: fixed;
+    top: 5vh;
     height: 60vh;
     left: 15vw;
 }
@@ -44,52 +61,15 @@
     }
   }
 
-
-.right-ppl{
-    position: absolute;
-    top: 10vh;
-    height: 60vh;
-    right: 15vw;
-}
-
 .md-ppl{
     position: fixed;
-    top: 38%;
+    top: 32%;
     left: 50%;
     height: 60vh;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
     z-index: 1;
 }
-
-#lifegame .btn {
-    border:4px solid black;
-    background: white;
-    color: black;
-    margin-top: 3px;
-    font-weight: 700;
-}
-
-
-
-/* .main-image{
-    height:100vh;
-    width: 100vh;
-    background-image: url(assets/BKG.png);
-    background-size: cover;
-} */
-
-body{
-    font-family: 'Noto Sans TC', sans-serif;
-}
-
-
-/* 
-#lifegame .container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-} */
 
 #lifegame h1 {
     font-weight: 800;
@@ -101,23 +81,3 @@ font-weight: 600;
 line-height: 1.5;
 color: #A65526;
 }
-
-#gametwo h3{
-margin-bottom: 30px;
-}
-
-
-
-/* #lifegame .btn {
-    background: #F2D027;
-    box-shadow: 10px 10px 0 #F2A649;
-    color: black;
-    display:inline-block;
-    padding:.5em 2em;
-    text-decoration:none;
-    transform: skew(-20deg);
-    -----
-    border-radius: 20px;
-    padding: 5px;
-    調整文字成正的，就把文字的class多加一個東西，而這個東西寫成transform: skew(20deg);
-} */
