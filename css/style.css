@@ -1,16 +1,47 @@
 /* 思源黑體的版本 */
-body{
+/* body{
     font-family: 'Noto Sans TC', sans-serif;
-}
+} */
 /* 下載英文8bit字體 */
 @font-face{
     font-family: slkscr;
     src: url("slkscr.ttf");
 }
-/*
+
 body{
     font-family: "slkscr", Noto Sans TC;
-} */
+}
+
+.cover-head{
+    position: fixed;
+    height: 25vh;
+    width: 100%;
+    top: 15vh;
+}
+
+.cover-head h1{
+    font-size: 95px;
+    color: white;
+}
+
+.cover-btn{
+    position: fixed;
+    height: 40vh;
+    width: auto;
+    top: 55vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 35px;
+    color: white;
+    font-family: 'slkscr', Noto Sans TC;
+}
+
+.cover-btn #start:hover{
+    color: #1a3b7e;
+}
+.cover-btn #skip:hover{
+    color: #1a3b7e;
+}
 
 .pplImages{
     position: relative;
@@ -42,7 +73,7 @@ body{
     border: white 5px double;
     height:35vh;
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     max-width: 80vw;
 }
@@ -51,13 +82,13 @@ body{
     border:4px solid black;
     background: white;
     color: black;
-    /* margin-top: 3px; */
     font-size: 23px;
     font-weight: 700;
 }
 
-#buttonClick .btn:hover{
-    border: white;
+#buttonClick .btn:hover::before{
+    /* content: "▶ "; */
+    content: ">> ";
 }
 
 
@@ -83,13 +114,9 @@ body{
   }
 
 
-#lifegame h1 {
-    font-weight: 800;
-}
-
 h3{
-font-size: 2em;
-font-weight: 600;
-line-height: 1.5;
-color: #A65526;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #2450A6;
 }

@@ -21,7 +21,7 @@
 
     <style>
         #cover{
-            background-image: url("assets/bkg4.jpg");
+            background-image: url("assets/cover.png");
         }
         #game {
             background-image: url("assets/bkg1.jpg");
@@ -36,8 +36,8 @@
         }
 
         .left-shadow {
-            -webkit-filter: drop-shadow(-12px 12px 7px rgba(0, 0, 0, 0.7));
-            filter: drop-shadow(-12px 12px 7px rgba(0, 0, 0, 0.7))
+            -webkit-filter: drop-shadow(-12px 12px 7px #252e18ea);
+            filter: drop-shadow(-12px 12px 7px  #252e18ea)
         }
 
         .buffer {
@@ -52,11 +52,15 @@
 
     <section id="lifegame">
         <div id="cover" class="container-fluid bkgStyle">
-            <div style="position: fixed; top: 50vh; height:30vh; left:50vw; width: 30vw;">
-                <p style="font-weight: bold;font-size: 60px;">原住民與棒球</p>
-                <p style="font-size: 25px;">還沒想到要打什麼</p>
-                <button id="skip">- Skip</button>
+            <div class="cover-head text-center left-shadow">
+                <h1># 原住民與棒球</h1>
             </div>
+            <div class="cover-btn text-center left-shadow">
+                <div id="start">- Start the game -<br><b>開始遊戲</b></div>
+                <div id="skip" style="margin-top: 5vh;">- Jump to the Report -<br><b>跳過看專題</b></div>
+            </div>
+            <!-- <p style="font-size: 35px;">還沒想到要打什麼所以暫時先隨便打</p> -->
+
         </div>
         <div id="game" class="container-fluid bkgStyle" style="display: none;">
             <div class="container pplImages">
@@ -78,7 +82,7 @@
     <div id="report" style="display: none;">
 
     <section id='cover'>
-        <div class="container-fluid" style="height: 150vh;background-color: beige;">
+        <div class="container-fluid" style="height: 150vh;background-color: #DCF2EE;">
 
         </div>
 
@@ -93,7 +97,7 @@
 
 
     <section id='intro' data-spy="scroll" data-target="#nav">
-        <div class="container-fluid section" style="height: 300vh;background-color: darkkhaki;">
+        <div class="container-fluid section" style="height: 300vh;background-color: #7D8C72;">
             <div class='buffer'></div>
             <div class="row" style="height: 30vh;">
                 <div class="col-sm-2"></div>
@@ -141,9 +145,9 @@
 
 
     <section id='reason' data-spy="scroll" data-target="#nav">
-        <div class='container-fluid section' style="height:400vh;background-color: blanchedalmond;">
+        <div class='container-fluid section' style="height:400vh;background-color: #DCF2EE;">
 
-            <div class='sticky-top' style="height:90vh;width: 40vw;background-color: blanchedalmond;padding-left: 0vw; z-index: 3;">
+            <div class='sticky-top' style="height:90vh;width: 40vw;background-color: #DCF2EE;padding-left: 0vw; z-index: 3;">
                 <div class='buffer'></div>
                 <p style='padding: 20vh 0px 20px;text-align: center;font-size: 20px'>為什麼原住民加入棒球隊的風氣那麼興盛？</p>
                 <p style='padding: 20px 0px 20px;text-align: center;font-size: 20px'>可以分成以下三個原因進一步說明：</p>
@@ -151,14 +155,14 @@
 
 
 
-            <div class=' container reason1' style="height: 70vh;margin-right: 5vw;width:45vw;z-index: 3;background-color: blanchedalmond;text-align:center">
+            <div class=' container reason1' style="height: 70vh;margin-right: 5vw;width:45vw;z-index: 3;background-color: #DCF2EE;text-align:center">
                 <h3>先天優勢</h3><br>
                 <p style="text-align:left">不可否認的，先天的優勢讓原住民成為運動場上的佼佼者，
                     他們在運動方面有著驚人的協調性與爆發力，也成為他們大量投入的契機與原因。
                 </p>
             </div>
 
-            <div class=' container reason2' style="height: 100vh;margin-right:5vw;width:45vw;z-index: 3;background-color: blanchedalmond;text-align:center">
+            <div class=' container reason2' style="height: 100vh;margin-right:5vw;width:45vw;z-index: 3;background-color: #DCF2EE;text-align:center">
 
                 <h3 style="height: 50px">社會風氣</h3>
                 <p style="text-align:left">家人的支持加上環境的催化，讓加入棒球隊對原住民小孩來說成為一種理所當然。許多原住民孩子一開始接觸到棒球都是受到家人的影響。受訪者小賴就有提到自己一開始就是因為爸爸很愛看棒球，於是看著看著自己也對棒球產生了興趣。<br><br>
@@ -169,7 +173,7 @@
 
             </div>
 
-            <div class=' container reason3' style="height: 140vh;margin-right:5vw;width:45vw;z-index: 3;background-color: blanchedalmond;text-align:center">
+            <div class=' container reason3' style="height: 140vh;margin-right:5vw;width:45vw;z-index: 3;background-color: #DCF2EE;text-align:center">
 
 
                 <h3>高薪誘因</h3>
@@ -198,7 +202,7 @@
 
 
     <section id='high_school' data-spy="scroll" data-target="#nav">
-        <div class='container-fluid' style="height: 390vh; background-color: darksalmon">
+        <div class='container-fluid' style="height: 390vh; background-color: #DCF2EE">
 
             <div class='row' style='background-color: black;min-height: 50vh;z-index: 10;'>
                 <div class="col-sm-3"></div>
@@ -210,14 +214,12 @@
 
             <div class='buffer'></div>
             <div class='row' style="height: 150vh">
-                <div class="col-sm-1"></div>
-                <div class="col-md-6">
+                <div class="col-md-6 offset-md-1 col-sm-10">
                     <p class="slideanimate">「教練覺得木棒組比較重要，大部分的精力都在木棒組上。當時感覺很差。木棒組去練球的時候時教練會過去，但換鋁棒組時就直接被放生。」</p>
                 </div>
                 <div class="col-md-5"></div>
 
-                <div class="col-md-5"></div>
-                <div class="col-md-6">
+                <div class="col-md-6 offset-md-5">
                     <p class="slideanimate">「高中棒球隊人比較多，學長學弟制也比較重，學長們會因為可能打掃沒有做好、或是心情不好時就打人。」</p>
                 </div>
                 <div class="col-sm-1"></div>
@@ -247,7 +249,7 @@
             <div class='row' style='background-color: black;height:70vh;z-index: 10;'>
                 <div class="col-md-2"></div>
                 <div id='highlight' class='container-fluid col-md-8 text-white'>
-                    <h1 class='fadeout' style="padding-top:20vh;">「本來很想放棄，覺得訓練越來越無聊也很不紮實，但學長說再撐一下就好了，到大學之後，就可以有更多訓練的機會了。」小賴這麼說。</h1>
+                    <h1 class='fadeout' style="padding-top:15vh;">「本來很想放棄，覺得訓練越來越無聊也很不紮實，但學長說再撐一下就好了，到大學之後，就可以有更多訓練的機會了。」小賴這麼說。</h1>
                 </div>
                 <div class="col-md-2"></div>
             </div>
@@ -423,8 +425,9 @@
                     buttonB.innerHTML = textButton[main][1];
                 };
             };
-        }
-        $("#cover").click(function(){
+        };
+
+        $("#start").click(function(){
             $("#cover").hide();
             $("#game").fadeIn(1500);
             console.log(subStage, mainStage);
@@ -441,7 +444,7 @@
             $("#buttonClick").hide();
             $("#nextClick").show();
             subStage = sub;
-            mainStage += 1;           
+            mainStage += 1;
         };
 
     </script>
