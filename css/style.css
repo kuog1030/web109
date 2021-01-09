@@ -22,7 +22,7 @@ body{
 .pplImages #left-ppl{
     position: absolute;
     height: 55vh;
-    left: 0px;
+    left: 3vw;
     bottom: 0px;
 }
 
@@ -38,7 +38,7 @@ body{
 .dialogue{
     position: relative;
     top: 10vh;
-    background:black;
+    background:rgba(0,0,0,0.9);
     border: white 5px double;
     height:35vh;
     color: white;
@@ -55,6 +55,12 @@ body{
     font-size: 23px;
     font-weight: 700;
 }
+
+#buttonClick .btn:hover{
+    border: white;
+}
+
+
 #nextClick{
     color:gray;
     font-family: slkscr;

@@ -21,7 +21,7 @@
 
     <style>
         #cover{
-            background-image: url("assets/cover.png");
+            background-image: url("assets/bkg4.jpg");
         }
         #game {
             background-image: url("assets/bkg1.jpg");
@@ -33,6 +33,11 @@
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
+        }
+
+        .left-shadow {
+            -webkit-filter: drop-shadow(-12px 12px 7px rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(-12px 12px 7px rgba(0, 0, 0, 0.7))
         }
 
         .buffer {
@@ -47,20 +52,22 @@
 
     <section id="lifegame">
         <div id="cover" class="container-fluid bkgStyle">
-            <p class="text-center" style="font-weight: bold;font-size: 30px; padding-top: 30vh;">
-                --------------------<br>click to start game<br>--------------------</p>
-            <button id="skip">- Skip</button>
+            <div style="position: fixed; top: 50vh; height:30vh; left:50vw; width: 30vw;">
+                <p style="font-weight: bold;font-size: 60px;">原住民與棒球</p>
+                <p style="font-size: 25px;">還沒想到要打什麼</p>
+                <button id="skip">- Skip</button>
+            </div>
         </div>
         <div id="game" class="container-fluid bkgStyle" style="display: none;">
             <div class="container pplImages">
-                <img id="left-ppl" src="">
+                <img id="left-ppl" class="left-shadow" src="">
                 <img id="md-ppl" src="">
             </div>
             <div class="container dialogue">
                 <div id="textStory" class="row" style="height: 22vh; padding: 1.2em;"></div>
                 <div id="buttonClick" class="row" style="display: none">
-                    <button id="chooseA" class="btn col-md-3 offset-md-2 col-sm-12"></button>
-                    <button id="chooseB" class="btn col-md-3 offset-md-2 col-sm-12"></button>
+                    <button id="chooseA" onclick="nextStage(1)" class="btn col-md-3 offset-md-2 col-sm-12"></button>
+                    <button id="chooseB" onclick="nextStage(0)"class="btn col-md-3 offset-md-2 col-sm-12"></button>
                 </div>
                 <div id="nextClick" class="col text-center" style="position: absolute; bottom: 2vh;">- click -</div>
 
@@ -430,18 +437,13 @@
             nextStep();
         });
 
-        $("#chooseA").click(function () {
+        function nextStage(sub){
             $("#buttonClick").hide();
             $("#nextClick").show();
-            subStage = 1;
-            mainStage += 1;
-        });
-        $("#chooseB").click(function () {
-            $("#buttonClick").hide();
-            $("#nextClick").show();
-            subStage = 0;
-            mainStage += 1;
-        })
+            subStage = sub;
+            mainStage += 1;           
+        };
+
     </script>
     <script src="js/game.js"></script>
 
