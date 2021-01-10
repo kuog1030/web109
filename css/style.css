@@ -8,7 +8,7 @@
     src: url("slkscr.ttf");
 }
 
-body{
+body #lifegame {
     font-family: "slkscr", Noto Sans TC;
 }
 

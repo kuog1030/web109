@@ -8,32 +8,6 @@ canvas {
     -ms-user-select: none;
 }
 
-#navbar {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: block;
-    transition: top 0.3s;
-    height: 50px;
-    z-index: 999;
-}
-
-#navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    /*            padding: 10px;*/
-    text-decoration: none;
-    font-size: 17px;
-}
-
-#navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
 .sticky-top {
     position: sticky;
     top: 60px;
@@ -84,21 +58,23 @@ body {
     top: 0px;
     left: 0px;
     width: 50px;
+    z-index: 999;
 }
 
 #nav a {
-    height: 25vh;
+    height: 20vh;
     background-color: rgba(255, 255, 255, 0.1);
     overflow-wrap: break-word;
     border: none;
+    margin-top: 10px;
 }
 
 #nav a.active {
     background-color: rgba(255, 255, 255, 0.5);
-    color: dodgerblue;
+    color: black;
 }
 
-p{
+p {
     font-size: 20px;
 }
 
@@ -111,10 +87,37 @@ p{
     opacity: 1;
 }
 
-#highlight_1{
-    background-image:url('/assets/highlught_1.jpg');
+#fullpage_1 {
+    background-image: url('/assets/fullpage_1.jpg');
     background-size: cover;
-    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+#color1{
+    width: 200px;
+    margin-left: 250px;
+}
+
+#sketch1{
+    width: 550px;
+    margin-left: 80px;
+    margin-top: 150px;
+}
+
+#fullpage_2 {
+    background-image: url('/assets/fullpage_2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+sticky-top fadeout{
+    background-attachment: fixed;
 }
 
 
