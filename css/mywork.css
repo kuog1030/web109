@@ -71,7 +71,7 @@ body {
 
 #nav a.active {
     background-color: rgba(255, 255, 255, 0.5);
-    color: black;
+    color:lemonchiffon;
 }
 
 p {
@@ -120,4 +120,7 @@ sticky-top fadeout{
     background-attachment: fixed;
 }
 
-
+#color3{
+    width: 250px;
+    margin-top: 50vh;
+}
