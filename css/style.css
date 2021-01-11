@@ -115,17 +115,23 @@ body #lifegame {
 
 #ending{
     padding-top:15vh;
+    height: 70vh;
+}
+
+h2{
+    font-size: 2.5em;
+    font-weight: 800;
 }
 
 h3{
     font-size: 2em;
     font-weight: 600;
     line-height: 1.5;
-    color: #2450A6;
+    color: #13402F;
 }
 
 .vl {
-    border-left: 6px solid rgb(0, 0, 0);
+    border-left: 6px solid white;
     height: 85vh;
     position: absolute;
     left: 50%;
@@ -135,7 +141,7 @@ h3{
   }
 
 .v2 {
-    border-left: 6px solid rgb(0, 0, 0);
+    border-left: 6px solid white;
     height: 55vh;
     position: absolute;
     left: 50%;
