@@ -88,7 +88,7 @@ p {
 }
 
 #fullpage_1 {
-    background-image: url('/assets/fullpage_1.jpg');
+    background-image: url('../assets/fullpage_1.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -108,7 +108,7 @@ p {
 }
 
 #fullpage_2 {
-    background-image: url('/assets/fullpage_2.jpg');
+    background-image: url('../assets/fullpage_2.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
