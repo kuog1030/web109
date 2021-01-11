@@ -124,3 +124,12 @@ sticky-top fadeout{
     width: 250px;
     margin-top: 50vh;
 }
+
+#pie1{
+    width: 40vw;
+}
+
+#pie2{
+    width: 40vw;
+    display: none;
+}
