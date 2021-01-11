@@ -19,7 +19,7 @@ textStories = {
 "5" : ["教練：你把這個錢拿來繳隊費比較實在啦！或是報體保阿，幹嘛報名，浪費錢。",
     "因為練球身體有了傷勢，高中打球的成績也沒特別好，哥哥說這樣根本就不能成為職棒選手。",
     "家裡的經濟不好，沒辦法繼續支撐我打棒球，爸媽也覺得應該要去讀有用一點的科系……",
-      "我還是放棄好了……"],}
+      "我還是放棄好了……"]}
 
 images = {"lai": "assets/lai.png", "lai2": "assets/lai2.png", "lai3": "assets/lai3.png", "lai4": "assets/lai4.png", "lai5": "assets/lai5.png",
           "friend": "assets/friend.png", "senpai": "assets/senpai.png", "senpai2": "assets/senpai2.png", "coach": "assets/coach.png"}
@@ -36,7 +36,7 @@ function imageChange(main, sub){
         } else if(sub == 1){
             imageM.src = "";
             imageL.src = images["lai2"];
-        } else if(sub == 3){
+        } else if(sub == 2){
             imageL.src = images["lai4"];
             $("#game").css("background-image", "url(assets/bkg2.jpg)");
         };

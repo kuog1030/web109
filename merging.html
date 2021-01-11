@@ -33,7 +33,7 @@
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 100% 100%;
             height: 100vh;
         }
 
@@ -41,6 +41,12 @@
             -webkit-filter: drop-shadow(-12px 12px 7px #252e18ea);
             filter: drop-shadow(-12px 12px 7px #252e18ea)
         }
+
+        .bottom-shadow {
+            -webkit-filter: drop-shadow(0px 12px 7px #000000e0);
+            filter: drop-shadow(0px 12px 7px #000000e0)
+        }
+
 
         .buffer {
             min-height: 20vh;
@@ -53,12 +59,9 @@
 
 <body data-spy="scroll" data-target="#nav" data-offset="0">
 
-    <!--
+    
     <section id="lifegame">
         <div id="cover" class="container-fluid bkgStyle">
-            <div class="cover-head text-center left-shadow">
-                <h1># 原住民與棒球</h1>
-            </div>
             <div class="cover-btn text-center left-shadow">
                 <div id="start">- Start the game -<br><b>開始遊戲</b></div>
                 <div id="skip" style="margin-top: 5vh;">- Jump to the Report -<br><b>跳過看內文</b></div>
@@ -70,26 +73,32 @@
                 <img id="left-ppl" class="left-shadow" src="">
                 <img id="md-ppl" src="">
             </div>
-            <div class="container dialogue">
+            <div class="container dialogue" id="dialogue_">
                 <div id="textStory" class="row" style="height: 22vh; padding: 1.2em;"></div>
                 <div id="buttonClick" class="row" style="display: none">
                     <button id="chooseA" onclick="nextStage(1)" class="btn col-md-3 offset-md-2 col-sm-12"></button>
                     <button id="chooseB" onclick="nextStage(0)" class="btn col-md-3 offset-md-2 col-sm-12"></button>
                 </div>
                 <div id="nextClick" class="col text-center" style="position: absolute; bottom: 2vh;">- click -</div>
-
             </div>
         </div>
     </section>
 
     <div id="report" style="display: none;">
--->
-
-    <section id='cover'>
-        <div class="container-fluid" style="min-height: 150vh;background-color: #DCF2EE;">
-
+        <div class="bkgStyle" style="background-image: url('assets/bkg2.jpg')">
+            <div id="ending" class="col-md-4 offset-md-4 text-center">
+                <img src="assets/end.gif" style="margin-bottom: 5vh;">
+                <h3 style="color:black">小賴的棒球路到此告了一個段落</h3>
+                <div class="vl"></div>
+            </div>
         </div>
 
+    <section id='cover'>
+        <div class="container-fluid" style="min-height: 120vh;background-color: #DCF2EE;">
+            <div class="col-md-4 offset-md-4 text-center">
+                <h3 style="color:black ;padding-top:60vh;">而球場外還有更多的例子</h3>
+                <div class="v2"></div>
+        </div>
     </section>
 
     <div id="nav" class="list-group" style="position:fixed">
@@ -157,21 +166,21 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-4 container reason1" style="height: 70vh;z-index: 3;background-color: #DCF2EE;text-align:center">
+                <div class="col-md-4 offset-md-2 container reason1" style="height: 70vh;z-index: 3;background-color: #DCF2EE;text-align:center">
                     <div class='buffer'></div>
                     <h3>先天優勢</h3><br>
                     <p style="text-align:left">不可否認的，先天的優勢讓原住民成為運動場上的佼佼者，
                         他們在運動方面有著驚人的協調性與爆發力，也成為他們大量投入的契機與原因。
                     </p>
                 </div>
-                <div class="col-sm-6"><img id='color1' src="assets/color1.png"></div>
+                <div class="col-6"><img id='color1' src="assets/color1.png"></div>
             </div>
             
 
                 <div class='buffer'></div>
                 <div class="row">
-                    <div class="col-sm-6"><img id='sketch1' src="assets/sketch1.png">
+                    <div class="col-6">
+                        <img id='sketch1' class="img-fluid" src="assets/sketch1.png">
                     </div>
                     <div class="col-sm-5 container reason2" style="min-height: 100vh;z-index: 3;background-color: #DCF2EE;text-align:center">
                         <h3>社會風氣</h3>
@@ -301,39 +310,29 @@
 
 
             <div class='buffer'></div>
-            <div class="row" style="min-height: 30vh">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6">
-                    <h2>經濟考量</h2>
-                    <h3>「我想要在大學繼續打棒球，看到上大學的隊友限時動態都在po我都很羨慕，但家裡經濟狀況不允許。」</h3>
-                    <br><br>
-                    <p>大多數原住民家中的經濟情況並不是很好，參加體育班對這群孩子的父母來說也是個負擔，因此若在高中沒有打出亮眼的成績，他們大多都會選擇放棄繼續打棒球，轉而走進一般的升學體制或是直接工作。即便錄取大學，大學昂貴的學費以及對家裡經濟的擔憂與責任，也都成為了無法破除的阻礙。</p>
-                </div>
-                <div class="col-sm-3"></div>
-            </div>
+            <div class="col-sm-12 col-md-10 offset-1">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <h2>經濟考量</h2>
+                        <h3>「我想要在大學繼續打棒球，看到上大學的隊友限時動態都在po我都很羨慕，但家裡經濟狀況不允許。」</h3>
+                        <br><br>
+                        <p>大多數原住民家中的經濟情況並不是很好，參加體育班對這群孩子的父母來說也是個負擔，因此若在高中沒有打出亮眼的成績，他們大多都會選擇放棄繼續打棒球，轉而走進一般的升學體制或是直接工作。即便錄取大學，大學昂貴的學費以及對家裡經濟的擔憂與責任，也都成為了無法破除的阻礙。</p>
+                    </div>
 
-            <div class='buffer'></div>
-            <div class="row" style="min-height: 30vh">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6">
-                    <h2>身體狀況</h2>
-                    <h3>「高中時，投手教練為了球速調動作的過程，身體開始有了些傷勢。有看過中西醫，西醫要求做核磁共振，但家人覺得太麻煩就不治療了。」</h3>
-                    <br><br>
-                    <p>大量以及高強度的訓練也讓他們身上受了傷，不利於選秀以及比賽，對其表現更產生巨大的影響，也因為缺乏金錢接受更進一步的治療。</p>
+                    <div class="col-sm-12 col-md-4">
+                        <h2>身體狀況</h2>
+                        <h3>「高中時，投手教練為了球速調動作的過程，身體開始有了些傷勢。有看過中西醫，西醫要求做核磁共振，但家人覺得太麻煩就不治療了。」</h3>
+                        <br><br>
+                        <p>大量以及高強度的訓練也讓他們身上受了傷，不利於選秀以及比賽，對其表現更產生巨大的影響，也因為缺乏金錢接受更進一步的治療。</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <h2>未來發展機會</h2>
+                        <h3>「大學的競爭更激烈，我高中的比賽成績沒有很好，不太可能打到更上面。家人也覺得我應該要去讀一些有用的科系，打棒球之後如果沒有用到就只會花錢，不如不要讀了。」</h3>
+                        <br><br>
+                        <p>雖然棒球已為台灣體壇中發展的較為成熟的一項運動，但出路仍然極為有限、加入職棒的機率並不高。職棒每年招收約30到50個新人球員，光是從棒球大專校隊畢業的應屆學生就超過250人，競爭非常激烈。環境的不成熟加上僧多粥少的情況，也讓他們以棒球為志向的人生有了不一樣的變化。</p>
+                    </div>
                 </div>
-                <div class="col-sm-3"></div>
-            </div>
-
-            <div class='buffer'></div>
-            <div class="row" style="min-height: 30vh">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6">
-                    <h2>未來發展機會</h2>
-                    <h3>「大學的競爭更激烈，我高中的比賽成績沒有很好，不太可能打到更上面。家人也覺得我應該要去讀一些有用的科系，打棒球之後如果沒有用到就只會花錢，不如不要讀了。」</h3>
-                    <br><br>
-                    <p>雖然棒球已為台灣體壇中發展的較為成熟的一項運動，但出路仍然極為有限、加入職棒的機率並不高。職棒每年招收約30到50個新人球員，光是從棒球大專校隊畢業的應屆學生就超過250人，競爭非常激烈。環境的不成熟加上僧多粥少的情況，也讓他們以棒球為志向的人生有了不一樣的變化。</p>
-                </div>
-                <div class="col-sm-3"></div>
+                <div class='buffer'></div>
             </div>
 
         </div>
@@ -393,7 +392,7 @@
             </div>
         </div>
     </section>
-
+</div>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -541,6 +540,11 @@
             $("#report").show();
         });
 
+        function gameEND(){
+            $("#game").hide();
+            $("#report").show();
+        };
+
         function nextStep() {
             var main = mainStage.toString();
             var maxStory = textStories[main].length;
@@ -551,8 +555,11 @@
             } else if (subStage == maxStory) {
                 subStage = 99;
                 if (main == '5') {
-                    $("#game").hide();
-                    $("#report").show();
+                    $("#left-ppl").fadeOut(1500);
+                    $("#dialogue_").fadeOut(1500);
+                    setTimeout(gameEND, 2000);
+                    // $("#game").hide();
+                    // $("#report").show();
                 } else {
                     $("#buttonClick").show();
                     $("#nextClick").hide();
