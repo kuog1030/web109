@@ -100,9 +100,7 @@ p {
     width: 100%;
 }
 
-#sketch1{
-    padding: 3vw;
-}
+
 
 #fullpage_2 {
     background-image: url('../assets/fullpage_2.jpg');
@@ -154,4 +152,12 @@ mark-white{
     line-height: 0.15;
     background-color:  white;
     padding: 0;
+}
+
+#sketch1{
+    width:50vw;
+}
+
+#sketch5{
+    padding: 3vw;
 }
