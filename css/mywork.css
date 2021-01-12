@@ -166,3 +166,10 @@ mark-white{
     height: 5vh;
     width: 5vh;
 }
+
+.last{
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    background-position: center;
+    padding: 16vh;
+}
