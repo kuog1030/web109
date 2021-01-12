@@ -63,15 +63,15 @@ body {
 
 #nav a {
     height: 20vh;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0,0,128, 0.1);
     overflow-wrap: break-word;
     border: none;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #nav a.active {
-    background-color: rgba(255, 255, 255, 0.5);
-    color:lemonchiffon;
+    background-color: rgba(0,0,128, 0.5);
+    color:aliceblue;
 }
 
 p {
@@ -136,3 +136,11 @@ h4{
     font-size: 1.8em;
     font-weight: 800;
 }
+
+ .bardiv {
+        position: absolute;
+        height: 40px;
+        background-color: dodgerblue;
+        opacity: 0;
+        color: white;
+    }
