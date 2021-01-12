@@ -58,19 +58,19 @@ body {
     top: 0px;
     left: 0px;
     width: 50px;
-    z-index: 999;
+    z-index: 20;
 }
 
 #nav a {
     height: 20vh;
-    background-color: rgba(0,0,128, 0.1);
+    background-color: #39465e38;
     overflow-wrap: break-word;
     border: none;
     margin-top: 5px;
 }
 
 #nav a.active {
-    background-color: rgba(0,0,128, 0.5);
+    background-color: #39465e;
     color:aliceblue;
 }
 
