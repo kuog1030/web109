@@ -1,8 +1,3 @@
-/* 思源黑體的版本 */
-/* body{
-    font-family: 'Noto Sans TC', sans-serif;
-} */
-/* 下載英文8bit字體 */
 @font-face{
     font-family: slkscr;
     src: url("slkscr.ttf");
@@ -87,7 +82,6 @@ body #lifegame {
 }
 
 #buttonClick .btn:hover::before{
-    /* content: "▶ "; */
     content: ">> ";
 }
 
@@ -159,11 +153,11 @@ h4{
 
 .vl {
     border-left: 6px solid white;
-    height: 85vh;
+    height: 80vh;
     position: absolute;
     left: 50%;
     margin-left: -3px;
-    top: 70vh;
+    top: 73vh;
     z-index: 2;
   }
 

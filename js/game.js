@@ -63,6 +63,7 @@ function imageChange(main, sub){
         } else if(sub == 1){
             imageM.src = "";
             imageL.src = images["lai4"];
+            $("#game").css("background-image", "url(assets/bkg3.png)");
         };        
     };
 
