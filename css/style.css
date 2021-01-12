@@ -127,7 +127,16 @@ h3{
     font-size: 2em;
     font-weight: 600;
     line-height: 1.5;
-    color: #13402F;
+    color: orangered;
+}
+
+h4{
+    margin-bottom: 5vh;
+}
+
+h5{
+    color: orangered;
+    font-weight: 600;
 }
 
 .vl {
