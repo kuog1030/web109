@@ -100,7 +100,11 @@ p {
     width: 100%;
 }
 
-
+#color2{
+    width: 300px;
+    padding-top: 100px;
+    padding-left: 20px;
+}
 
 #fullpage_2 {
     background-image: url('../assets/fullpage_2.jpg');
