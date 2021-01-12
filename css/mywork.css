@@ -154,10 +154,11 @@ mark-white{
     padding: 0;
 }
 
-#sketch1{
-    width:50vw;
-}
-
 #sketch5{
     padding: 3vw;
 }
+#sketch1{
+    width:80vw;
+    padding-left: 150px;
+}
+
