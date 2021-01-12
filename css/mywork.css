@@ -97,8 +97,7 @@ p {
 }
 
 #color1{
-    width: 200px;
-    margin-left: 250px;
+    width: 100%;
 }
 
 #sketch1{
@@ -124,11 +123,11 @@ sticky-top fadeout{
 }
 
 #pie1{
-    width: 40vw;
+    width: 35vw;
 }
 
 #pie2{
-    width: 40vw;
+    width: 35vw;
     display: none;
 }
 
