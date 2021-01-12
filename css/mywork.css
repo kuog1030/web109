@@ -173,7 +173,18 @@ mark-white{
 
 .last{
     background-repeat: no-repeat;
-    background-size: 100% 70%;
+    background-size: 100% 60%;
     background-position: center;
-    padding: 16vh;
+    height: 50vh
+}
+
+.boxText{
+    position: relative;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold
 }
