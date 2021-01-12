@@ -111,11 +111,17 @@ body #lifegame {
         max-width: 95vw;
         font-size: 20px;
     }
-  }
+}
 
 #ending{
-    padding-top:15vh;
     height: 70vh;
+}
+
+img.animated-gif{
+    width: auto;
+    height: 35vh;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
 }
 
 h2{
@@ -124,20 +130,32 @@ h2{
 }
 
 h3{
-    font-size: 2em;
-    font-weight: 600;
+    font-size: 2.1em;
+    font-weight: 900;
     line-height: 1.5;
     color: orangered;
 }
 
 h4{
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
+    font-size: 2.2em;
+    font-weight: 800;
 }
 
-h5{
+#barrier h4{
+    font-size: 2em;
+    margin-bottom: 10vh;
+}
+
+
+#barrier h5{
     color: orangered;
     font-weight: 600;
+    font-size: 3vh;
+    line-height: 1.5;
+    margin-bottom: 10vh;
 }
+
 
 .vl {
     border-left: 6px solid white;

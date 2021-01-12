@@ -97,8 +97,7 @@ p {
 }
 
 #color1{
-    width: 200px;
-    margin-left: 250px;
+    width: 100%;
 }
 
 #sketch1{
@@ -124,23 +123,35 @@ sticky-top fadeout{
 }
 
 #pie1{
-    width: 40vw;
+    width: 35vw;
 }
 
 #pie2{
-    width: 40vw;
+    width: 35vw;
     display: none;
 }
 
-h4{
-    font-size: 1.8em;
-    font-weight: 800;
-}
-
- .bardiv {
+.bardiv {
         position: absolute;
         height: 40px;
         background-color: dodgerblue;
         opacity: 0;
         color: white;
-    }
+}
+
+mark{
+    display: inline-block; 
+    height: 0.75em;
+    line-height: 0.15;
+    background-color:  #83aeff;
+    padding: 0;
+    font-weight: bold;
+}
+
+mark-white{
+    display: inline-block; 
+    height: 0.75em;
+    line-height: 0.15;
+    background-color:  white;
+    padding: 0;
+}
