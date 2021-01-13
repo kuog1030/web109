@@ -150,11 +150,11 @@ mark{
     font-weight: bold;
 }
 
-mark-white{
+mark-orange{
     display: inline-block; 
     height: 0.75em;
     line-height: 0.15;
-    background-color:  white;
+    background-color:  rgb(219, 100, 84);
     padding: 0;
 }
 
@@ -167,6 +167,7 @@ mark-white{
 }
 
 .arrow{
+    margin-top: 1vh;
     height: 5vh;
     width: 5vh;
 }
@@ -187,4 +188,8 @@ mark-white{
     color: white;
     font-size: 1.6em;
     font-weight: bold
+}
+
+.bardiv{
+    background-color: #253759;
 }
